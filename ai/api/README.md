@@ -7,7 +7,7 @@ FastAPI service that loads the XGBoost ensemble model for real estate price pred
 The trained model is located at:
 
 ```text
-ai_api/models/xgb_price_unit_ensemble_model.joblib
+ai/api/models/xgb_price_unit_ensemble_model.joblib
 ```
 
 This file is tracked in Git and is loaded automatically on startup.
@@ -17,7 +17,7 @@ replace this file and redeploy.
 ## Run locally
 
 ```bash
-cd ai_api
+cd ai/api
 python -m venv .venv
 .venv\Scripts\activate       # Windows
 # source .venv/bin/activate  # macOS/Linux
@@ -37,7 +37,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 | Setting | Value |
 |---------|-------|
-| Root Directory | `ai_api` |
+| Root Directory | `ai/api` |
 | Runtime | Python 3 |
 | Build Command | `pip install -r requirements.txt` |
 | Start Command | `uvicorn main:app --host 0.0.0.0 --port $PORT` |

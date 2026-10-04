@@ -29,7 +29,7 @@ _candidates = [
     # 배포 패키지 내 모델 (현재 실제 존재하는 경로)
     _here / "models" / "xgb_price_unit_ensemble_model.joblib",
     # 로컬 학습 결과 경로 (개발 환경에서만 존재)
-    _here.parent / "ai_training" / "outputs_coord_test" / "xgb_price_unit_ensemble_model.joblib",
+    _here.parent / "training" / "outputs_coord_test" / "xgb_price_unit_ensemble_model.joblib",
 ]
 MODEL_PATH = next((p for p in _candidates if p and p.exists()), _candidates[1])
 

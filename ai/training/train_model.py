@@ -1247,7 +1247,7 @@ def main():
         default="최종_용인_실거래가_통합_결측채움.csv",
         help="Training CSV path",
     )
-    parser.add_argument("--output-dir", default="ai_training/outputs")
+    parser.add_argument("--output-dir", default="ai/training/outputs")
     parser.add_argument("--mode", choices=["quick", "full"], default="full")
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
     parser.add_argument(
@@ -1297,7 +1297,7 @@ def main():
     )
     parser.add_argument(
         "--coord-cache",
-        default="ai_training/yongin_coord_cache.csv",
+        default="ai/training/yongin_coord_cache.csv",
         help="CSV cache with address_key, latitude, longitude. Created/updated when Kakao API key is available.",
     )
     parser.add_argument(
@@ -1463,14 +1463,14 @@ import sys
 sys.argv = [
     "colab_run.py",
     "--data", "최종_용인_실거래가_통합_결측채움.csv",
-    "--output-dir", "ai_training/outputs_coord_test",
+    "--output-dir", "ai/training/outputs_coord_test",
     "--mode", "full",
     "--device", "cpu",
     "--train-outlier-quantile", "1.0",
     "--risk-segment-weight", "1.0",
     "--calibration-strength", "0.0",
     "--residual-strength", "0.0",
-    "--coord-cache", "ai_training/yongin_coord_cache.csv",
+    "--coord-cache", "ai/training/yongin_coord_cache.csv",
     "--coord-grid-size", "0.005"
 ]
 

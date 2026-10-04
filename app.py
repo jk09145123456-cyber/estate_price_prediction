@@ -1,8 +1,8 @@
 import sys
 from pathlib import Path
 
-# ai_api 디렉터리를 모듈 검색 경로에 추가
-sys.path.insert(0, str(Path(__file__).resolve().parent / "ai_api"))
+# ai/api 디렉터리를 모듈 검색 경로에 추가
+sys.path.insert(0, str(Path(__file__).resolve().parent / "ai" / "api"))
 
 from fastapi import FastAPI, HTTPException
 from model_service import PriceModelService

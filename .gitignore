@@ -1,3 +1,8 @@
+# Claude Code
+CLAUDE.md
+claude.md
+.claude/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -16,7 +21,7 @@ build/
 *.log
 
 # 학습 임시 캐시
-ai_training/yongin_coord_cache.csv
+ai/training/yongin_coord_cache.csv
 
 # IDE
 .idea/
