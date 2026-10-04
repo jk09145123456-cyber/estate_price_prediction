@@ -1,3 +1,8 @@
+# Claude Code
+CLAUDE.md
+claude.md
+.claude/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -7,6 +12,10 @@ venv/
 *.egg-info/
 dist/
 build/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
 
 # 환경변수
 .env
@@ -15,8 +24,11 @@ build/
 # 로그
 *.log
 
-# 학습 임시 캐시
-ai_training/yongin_coord_cache.csv
+# 학습 데이터 / 산출물 (배포 모델은 ai/api/models 에서 관리)
+ai/training/*.csv
+ai/training/outputs*/
+*.csv
+!backend/src/main/resources/**/*.csv
 
 # IDE
 .idea/

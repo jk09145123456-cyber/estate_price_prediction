@@ -1,29 +1,11 @@
+"""Render 루트 배포용 엔트리포인트.
+
+실제 구현은 ai/api/main.py 에 있으며, 루트에서 `uvicorn app:app` 으로 실행할 수 있도록 재노출한다.
+"""
 import sys
 from pathlib import Path
 
-# ai_api 디렉터리를 모듈 검색 경로에 추가
-sys.path.insert(0, str(Path(__file__).resolve().parent / "ai_api"))
+# ai/api 디렉터리를 모듈 검색 경로에 추가
+sys.path.insert(0, str(Path(__file__).resolve().parent / "ai" / "api"))
 
-from fastapi import FastAPI, HTTPException
-from model_service import PriceModelService
-from schemas import PricePredictionRequest, PricePredictionResponse
-
-app = FastAPI(title="Housing Price Prediction API")
-model_service = PriceModelService()
-
-
-@app.get("/health")
-def health():
-    return {
-        "status": "ok" if model_service.is_loaded() else "model_not_loaded",
-        "model_loaded": model_service.is_loaded(),
-        "detail": model_service.load_error,
-    }
-
-
-@app.post("/predict", response_model=PricePredictionResponse)
-def predict(request: PricePredictionRequest):
-    try:
-        return model_service.predict(request)
-    except RuntimeError as exc:
-        raise HTTPException(status_code=503, detail=str(exc)) from exc
+from main import app  # noqa: E402,F401
