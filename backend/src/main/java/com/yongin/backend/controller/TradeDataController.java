@@ -1,9 +1,9 @@
 package com.yongin.backend.controller;
 
-import com.yongin.backend.dto.RegionSummary;
-import com.yongin.backend.dto.PriceTrendPoint;
-import com.yongin.backend.dto.RegionalAnalysisStat;
-import com.yongin.backend.dto.TradeData;
+import com.yongin.backend.dto.trade.RegionSummary;
+import com.yongin.backend.dto.trade.PriceTrendPoint;
+import com.yongin.backend.dto.trade.RegionalAnalysisStat;
+import com.yongin.backend.dto.trade.TradeData;
 import com.yongin.backend.service.TradeDataService;
 import org.springframework.web.bind.annotation.*;
 

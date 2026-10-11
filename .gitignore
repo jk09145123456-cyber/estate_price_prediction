@@ -6,28 +6,30 @@ claude.md
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
 .venv/
 venv/
 *.egg-info/
-dist/
-build/
 .ipynb_checkpoints/
 
 # Node
 node_modules/
+dist/
 
-# 환경변수
+# Java / Gradle
+.gradle/
+build/
+
+# Environment
 .env
 .env.*
+!.env.example
 
-# 로그
+# Logs
 *.log
 
-# 학습 데이터 / 산출물 (배포 모델은 ai/api/models 에서 관리)
-ai/training/*.csv
-ai/training/outputs*/
+# Training data and outputs (deployed model lives in ai/models/)
 *.csv
+ai/training/outputs*/
 !backend/src/main/resources/**/*.csv
 
 # IDE

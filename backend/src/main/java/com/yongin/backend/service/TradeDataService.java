@@ -1,11 +1,11 @@
 package com.yongin.backend.service;
 
-import com.yongin.backend.dto.AreaBandStat;
-import com.yongin.backend.dto.MonthlyTrendPoint;
-import com.yongin.backend.dto.PriceTrendPoint;
-import com.yongin.backend.dto.RegionalAnalysisStat;
-import com.yongin.backend.dto.RegionSummary;
-import com.yongin.backend.dto.TradeData;
+import com.yongin.backend.dto.trade.AreaBandStat;
+import com.yongin.backend.dto.trade.MonthlyTrendPoint;
+import com.yongin.backend.dto.trade.PriceTrendPoint;
+import com.yongin.backend.dto.trade.RegionalAnalysisStat;
+import com.yongin.backend.dto.trade.RegionSummary;
+import com.yongin.backend.dto.trade.TradeData;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
